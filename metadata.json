@@ -1,0 +1,6 @@
+{
+  "name": "AgroVision Farm-to-Market Advantage",
+  "description": "Structured market-access and produce-aggregation service connecting farmers in Nigeria to real buyers, fairer prices, and organised transportation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

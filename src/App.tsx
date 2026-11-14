@@ -22,6 +22,10 @@ import {
 } from './data/salesCopy';
 import { ImageWithFallback } from './components/ImageWithFallback';
 import { RegistrationModal } from './components/RegistrationModal';
+import agrovisionLogo from './assets/images/agrovision_logo.png';
+import heroHarvestImg from './assets/images/hero_soybean_harvest_1794649621074.jpg';
+import bridgeLogisticsImg from './assets/images/bridge_aggregation_logistics_1794649622540.jpg';
+import farmerPrepImg from './assets/images/farmer_market_preparation_1794649621256.jpg';
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -64,18 +68,17 @@ export default function App() {
           >
             {logoError ? (
               <span
-                className="text-lg sm:text-xl font-bold tracking-tight text-[#102A43] whitespace-nowrap"
+                className="text-lg font-bold tracking-tight text-[#102A43] whitespace-nowrap"
                 style={{ fontFamily: 'var(--font-display)' }}
               >
                 AgroVision
               </span>
             ) : (
               <img
-                src="https://i.ibb.co/ZphhYhz5/file-00000000240081f49564ed684cdd5ed3.png"
+                src={agrovisionLogo}
                 alt="AgroVision"
-                referrerPolicy="no-referrer"
                 onError={() => setLogoError(true)}
-                className="h-10 sm:h-11 w-auto object-contain"
+                className="h-9 sm:h-10 w-auto object-contain"
               />
             )}
           </a>
@@ -173,48 +176,48 @@ export default function App() {
       <main>
         {/* 1 & 2. HERO SECTION */}
         <section className="bg-white border-b border-[#E2E8F0]">
-          <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-24">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-stretch">
+          <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
               <div className="lg:col-span-7 flex flex-col justify-center">
-                <p className="text-[15px] sm:text-sm font-semibold text-[#0D9488] tracking-normal mb-3.5 sm:mb-4">
+                <p className="text-xs sm:text-sm font-semibold text-[#0D9488] tracking-normal mb-3">
                   AgroVision Farm-to-Market Advantage™
                 </p>
-                <h1 className="text-[2.125rem] sm:text-[2.75rem] lg:text-[3.375rem] font-extrabold text-[#102A43] leading-[1.15] tracking-tight">
+                <h1 className="text-[34px] sm:text-[36px] lg:text-[42px] font-extrabold text-[#102A43] leading-[1.16] tracking-tight">
                   You Grew The Food. So Why Does Someone Else Set Your Price?
                 </h1>
-                <p className="mt-5 sm:mt-6 text-[18px] sm:text-xl text-[#475569] leading-[1.6] max-w-2xl">
+                <p className="mt-4 sm:mt-5 text-[18px] sm:text-[18px] text-[#475569] leading-[1.6] max-w-2xl">
                   AgroVision Farm-to-Market Advantage™ connects you to real buyers, fairer prices, and organised transportation — so you sell your harvest on prepared ground, not on panic.
                 </p>
-                <p className="mt-4 text-[17px] sm:text-lg font-semibold text-[#102A43] leading-[1.6]">
+                <p className="mt-3 text-[17px] sm:text-[16px] font-semibold text-[#102A43] leading-[1.6]">
                   Registration is free. Start before your harvest, not after it.
                 </p>
 
-                <div className="mt-7 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+                <div className="mt-6 sm:mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                   <a
                     href={WHATSAPP_DEFAULT_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg bg-[#0F766E] text-white text-base font-semibold hover:bg-[#0D9488] transition-colors sm:whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F766E]"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#0F766E] text-white text-[15px] font-semibold hover:bg-[#0D9488] transition-colors sm:whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F766E]"
                   >
-                    <MessageSquare className="w-5 h-5 shrink-0" aria-hidden="true" />
+                    <MessageSquare className="w-4 h-4 shrink-0" aria-hidden="true" />
                     Register Free on WhatsApp
                   </a>
                   <button
                     type="button"
                     onClick={() => setIsModalOpen(true)}
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg border border-[#E2E8F0] bg-[#F4F8F6] text-[#102A43] text-base font-semibold hover:border-[#0D9488] transition-colors cursor-pointer sm:whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D9488]"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg border border-[#E2E8F0] bg-[#F4F8F6] text-[#102A43] text-[15px] font-semibold hover:border-[#0D9488] transition-colors cursor-pointer sm:whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D9488]"
                   >
                     Register With Simple Form
                     <ArrowRight className="w-4 h-4 text-[#0D9488] shrink-0" aria-hidden="true" />
                   </button>
                 </div>
 
-                <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-[15px] sm:text-sm text-[#475569] leading-[1.6]">
+                <div className="mt-5 flex flex-wrap items-center gap-x-3.5 gap-y-1.5 text-[13px] sm:text-sm text-[#475569] leading-[1.5]">
                   <a
                     href={`tel:${PHONE_DISPLAY}`}
                     className="inline-flex items-center gap-1.5 font-medium text-[#102A43] hover:text-[#0D9488] transition-colors"
                   >
-                    <Phone className="w-4 h-4 text-[#0D9488]" aria-hidden="true" />
+                    <Phone className="w-3.5 h-3.5 text-[#0D9488]" aria-hidden="true" />
                     Call: {PHONE_DISPLAY}
                   </a>
                   <span aria-hidden="true" className="text-[#E2E8F0]">
@@ -229,9 +232,9 @@ export default function App() {
               </div>
 
               <div className="lg:col-span-5">
-                <div className="h-full min-h-[260px] sm:min-h-[360px] rounded-xl overflow-hidden border border-[#E2E8F0] bg-[#F4F8F6]">
+                <div className="h-full min-h-[240px] sm:min-h-[320px] rounded-xl overflow-hidden border border-[#E2E8F0] bg-[#F4F8F6]">
                   <ImageWithFallback
-                    src="/src/assets/images/hero_soybean_harvest_1794649621074.jpg"
+                    src={heroHarvestImg}
                     alt="Neatly stacked harvest bags of dried soybeans and maize on a Nigerian farm at morning light"
                     fallbackTitle="Harvest Sacks Ready for Market Preparation"
                     className="w-full h-full object-cover"
@@ -243,13 +246,13 @@ export default function App() {
         </section>
 
         {/* 3. OPENING HOOK */}
-        <section className="bg-white py-14 sm:py-24">
+        <section className="bg-white py-12 sm:py-16 lg:py-20">
           <div className="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8">
-            <h2 className="text-[24px] sm:text-3xl font-bold text-[#102A43] leading-[1.25] tracking-tight">
+            <h2 className="text-[24px] sm:text-[28px] font-bold text-[#102A43] leading-[1.25] tracking-tight">
               It&apos;s harvest morning.
             </h2>
 
-            <div className="mt-6 space-y-5 text-[17px] sm:text-lg leading-[1.6] text-[#475569]">
+            <div className="mt-5 space-y-4 text-[17px] sm:text-[16px] leading-[1.6] text-[#475569]">
               <p>
                 Your soybeans are bagged. Your maize is dried and ready. And in two weeks, school fees are due.
               </p>
@@ -268,11 +271,11 @@ export default function App() {
               </p>
             </div>
 
-            <div className="mt-8 rounded-xl bg-[#F4F8F6] border border-[#E2E8F0] p-6 sm:p-8">
-              <p className="text-[20px] sm:text-2xl font-bold text-[#102A43] leading-[1.35]">
+            <div className="mt-7 rounded-xl bg-[#F4F8F6] border border-[#E2E8F0] p-5 sm:p-7">
+              <p className="text-[19px] sm:text-[20px] font-bold text-[#102A43] leading-[1.35]">
                 You are not a bad farmer. You are a farmer without a market system.
               </p>
-              <p className="mt-3 text-[17px] sm:text-lg font-semibold text-[#0D9488] leading-[1.6]">
+              <p className="mt-2.5 text-[17px] sm:text-[16px] font-semibold text-[#0D9488] leading-[1.6]">
                 That is the part nobody fixed. Until now.
               </p>
             </div>
@@ -280,22 +283,22 @@ export default function App() {
         </section>
 
         {/* 4. PAIN POINTS */}
-        <section id="the-problem" className="bg-[#F4F8F6] border-y border-[#E2E8F0] py-14 sm:py-24">
+        <section id="the-problem" className="bg-[#F4F8F6] border-y border-[#E2E8F0] py-12 sm:py-16 lg:py-20">
           <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <h2 className="text-[24px] sm:text-4xl font-bold text-[#102A43] leading-[1.25] tracking-tight">
+              <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-bold text-[#102A43] leading-[1.25] tracking-tight">
                 THIS IS YOUR SEASON, ISN&apos;T IT?
               </h2>
-              <p className="mt-4 text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+              <p className="mt-3 text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                 If any of these sound like your last harvest, read on:
               </p>
             </div>
 
-            <div className="mt-8 sm:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+            <div className="mt-7 sm:mt-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {PAIN_POINTS.map((item, idx) => (
                 <article
                   key={item.title}
-                  className="bg-white border border-[#E2E8F0] rounded-xl p-6 sm:p-7 flex flex-col justify-between"
+                  className="bg-white border border-[#E2E8F0] rounded-xl p-5 sm:p-6 flex flex-col justify-between"
                 >
                   <div>
                     <span
@@ -304,10 +307,10 @@ export default function App() {
                     >
                       0{idx + 1}
                     </span>
-                    <h3 className="mt-2 text-[19px] sm:text-xl font-bold text-[#102A43] leading-[1.3]">
+                    <h3 className="mt-1.5 text-[18px] sm:text-[18px] font-bold text-[#102A43] leading-[1.35]">
                       {item.title}
                     </h3>
-                    <p className="mt-3 text-[17px] text-[#475569] leading-[1.6]">
+                    <p className="mt-2.5 text-[17px] sm:text-[15px] text-[#475569] leading-[1.6]">
                       {item.body}
                     </p>
                   </div>
@@ -315,11 +318,11 @@ export default function App() {
               ))}
             </div>
 
-            <div className="mt-10 max-w-3xl pt-8 border-t border-[#E2E8F0]">
-              <p className="text-[19px] sm:text-xl font-bold text-[#102A43] leading-[1.35]">
+            <div className="mt-9 max-w-3xl pt-7 border-t border-[#E2E8F0]">
+              <p className="text-[18px] sm:text-[19px] font-bold text-[#102A43] leading-[1.4]">
                 None of this is a farming problem. You already know how to farm.
               </p>
-              <p className="mt-2.5 text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+              <p className="mt-2 text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                 It&apos;s a market-access problem. And it has a structure — which means it can be broken.
               </p>
             </div>
@@ -327,42 +330,42 @@ export default function App() {
         </section>
 
         {/* 5. FAILED SOLUTIONS */}
-        <section className="bg-white py-14 sm:py-24">
+        <section className="bg-white py-12 sm:py-16 lg:py-20">
           <div className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
-            <h2 className="text-[24px] sm:text-4xl font-bold text-[#102A43] leading-[1.25] tracking-tight">
+            <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-bold text-[#102A43] leading-[1.25] tracking-tight">
               YOU&apos;VE ALREADY TRIED
             </h2>
-            <p className="mt-4 text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+            <p className="mt-3 text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
               You didn&apos;t sit still. You&apos;ve tried:
             </p>
 
-            <div className="mt-8 divide-y divide-[#E2E8F0] border-y border-[#E2E8F0]">
+            <div className="mt-7 divide-y divide-[#E2E8F0] border-y border-[#E2E8F0]">
               {FAILED_SOLUTIONS.map((item, idx) => (
                 <div
                   key={item.lead}
-                  className="py-5 sm:py-6 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6"
+                  className="py-4 sm:py-5 flex flex-col sm:flex-row sm:items-baseline gap-1.5 sm:gap-5"
                 >
                   <span
-                    className="text-sm font-semibold text-[#0D9488] shrink-0 tabular-nums"
+                    className="text-xs sm:text-sm font-semibold text-[#0D9488] shrink-0 tabular-nums"
                     style={{ fontFamily: 'var(--font-mono)' }}
                   >
                     0{idx + 1}
                   </span>
-                  <p className="text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+                  <p className="text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                     <span className="font-bold text-[#102A43]">{item.lead}</span> — {item.detail}
                   </p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-9 sm:mt-10 rounded-xl bg-[#F4F8F6] border border-[#E2E8F0] p-6 sm:p-8 space-y-4">
-              <p className="text-[19px] sm:text-xl font-bold text-[#102A43] leading-[1.35]">
+            <div className="mt-8 rounded-xl bg-[#F4F8F6] border border-[#E2E8F0] p-5 sm:p-7 space-y-3">
+              <p className="text-[18px] sm:text-[19px] font-bold text-[#102A43] leading-[1.4]">
                 Here&apos;s why every one of them failed: they gave you advice, promises, or pressure — but never a system.
               </p>
-              <p className="text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+              <p className="text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                 Nobody organised the path between your farm and a real buyer. Nobody documented the terms. Nobody stayed after the first visit.
               </p>
-              <p className="text-[17px] sm:text-lg font-semibold text-[#0D9488] leading-[1.6]">
+              <p className="text-[17px] sm:text-[16px] font-semibold text-[#0D9488] leading-[1.6]">
                 That&apos;s the difference. And it&apos;s exactly what AgroVision was built to be.
               </p>
             </div>
@@ -370,13 +373,13 @@ export default function App() {
         </section>
 
         {/* 6. THE BRIDGE */}
-        <section className="bg-[#F4F8F6] border-y border-[#E2E8F0] py-14 sm:py-24">
+        <section className="bg-[#F4F8F6] border-y border-[#E2E8F0] py-12 sm:py-16 lg:py-20">
           <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-stretch">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
               <div className="lg:col-span-6 order-2 lg:order-1">
-                <div className="h-full min-h-[250px] sm:min-h-[260px] rounded-xl overflow-hidden border border-[#E2E8F0] bg-white">
+                <div className="h-full min-h-[240px] sm:min-h-[280px] rounded-xl overflow-hidden border border-[#E2E8F0] bg-white">
                   <ImageWithFallback
-                    src="/src/assets/images/bridge_aggregation_logistics_1794649622540.jpg"
+                    src={bridgeLogisticsImg}
                     alt="Grain sacks being weighed on a platform scale and loaded onto a delivery truck at an agricultural collection point"
                     fallbackTitle="Organised Weighing & Logistics Coordination"
                     className="w-full h-full object-cover"
@@ -384,26 +387,26 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="lg:col-span-6 order-1 lg:order-2 flex flex-col justify-center space-y-4 sm:space-y-5">
-                <h2 className="text-[24px] sm:text-4xl font-bold text-[#102A43] leading-[1.25] tracking-tight">
+              <div className="lg:col-span-6 order-1 lg:order-2 flex flex-col justify-center space-y-4">
+                <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-bold text-[#102A43] leading-[1.25] tracking-tight">
                   The buyers you need already exist.
                 </h2>
-                <p className="text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+                <p className="text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                   Wholesalers. Processors. Food manufacturers. Retail chains. They are looking for reliable produce, in real quantities, delivered to agreed standards, at agreed times.
                 </p>
-                <p className="text-[17px] sm:text-lg font-semibold text-[#102A43] leading-[1.6]">
+                <p className="text-[17px] sm:text-[16px] font-semibold text-[#102A43] leading-[1.6]">
                   The problem was never that buyers don&apos;t exist.
                 </p>
-                <p className="text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+                <p className="text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                   The problem is that a farmer alone cannot walk the whole path: find the buyer, prove the quantity, meet the volume, negotiate the price, organise the transport, and collect the money. One farmer, one harvest, one phone — against an entire supply chain.
                 </p>
-                <p className="text-[18px] font-bold text-[#0D9488] leading-[1.5]">
+                <p className="text-[18px] sm:text-[17px] font-bold text-[#0D9488] leading-[1.5]">
                   So AgroVision walks the path with you.
                 </p>
-                <p className="text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+                <p className="text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                   We register the farmers. We record the produce. We find the buyers. We pool small harvests into big ones. We put the terms in writing. We coordinate the trucks. We follow the payment.
                 </p>
-                <p className="text-[19px] sm:text-xl font-bold text-[#102A43] leading-[1.35]">
+                <p className="text-[18px] sm:text-[18px] font-bold text-[#102A43] leading-[1.4]">
                   You keep farming. We handle the road between your farm and the market.
                 </p>
               </div>
@@ -412,37 +415,37 @@ export default function App() {
         </section>
 
         {/* 7. PROGRAM INTRODUCTION */}
-        <section className="bg-white py-14 sm:py-24">
+        <section className="bg-white py-12 sm:py-16 lg:py-20">
           <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-stretch">
-              <div className="lg:col-span-7 flex flex-col justify-center space-y-4 sm:space-y-5">
-                <h2 className="text-[24px] sm:text-4xl font-bold text-[#102A43] leading-[1.25] tracking-tight">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+              <div className="lg:col-span-7 flex flex-col justify-center space-y-4">
+                <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-bold text-[#102A43] leading-[1.25] tracking-tight">
                   Introducing: AgroVision Farm-to-Market Advantage™
                 </h2>
-                <p className="text-[18px] sm:text-xl font-semibold text-[#0D9488] leading-[1.45]">
+                <p className="text-[18px] sm:text-[18px] font-semibold text-[#0D9488] leading-[1.45]">
                   From Farm to Market, Creating Better Opportunities for Every Farmer.
                 </p>
-                <p className="text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+                <p className="text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                   AgroVision Farm-to-Market Advantage™ is a structured market-access and produce-aggregation service for smallholder and medium-scale farmers in Nigeria.
                 </p>
-                <p className="text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+                <p className="text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                   In plain language: you register your farm and your expected harvest with us — and we work to connect you with real buyers, fairer prices, pooled volumes, and organised transportation. Before your harvest arrives, not after.
                 </p>
-                <p className="text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+                <p className="text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                   You register through WhatsApp, a phone call, a simple form, or our field representative who visits your community. No smartphone expertise required. No upfront registration fee.
                 </p>
-                <p className="text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+                <p className="text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                   You are not applying for a loan. You are not joining a cooperative. You are not handing anyone your produce on promises.
                 </p>
-                <p className="text-[19px] sm:text-xl font-bold text-[#102A43] leading-[1.35]">
+                <p className="text-[18px] sm:text-[18px] font-bold text-[#102A43] leading-[1.4]">
                   You are registering your harvest — and putting a market system behind it.
                 </p>
               </div>
 
               <div className="lg:col-span-5">
-                <div className="h-full min-h-[260px] sm:min-h-[280px] rounded-xl overflow-hidden border border-[#E2E8F0] bg-[#F4F8F6]">
+                <div className="h-full min-h-[240px] sm:min-h-[280px] rounded-xl overflow-hidden border border-[#E2E8F0] bg-[#F4F8F6]">
                   <ImageWithFallback
-                    src="/src/assets/images/farmer_market_preparation_1794649621256.jpg"
+                    src={farmerPrepImg}
                     alt="Farmer inspecting clean dried maize and soybeans held in hands above woven harvest sacks"
                     fallbackTitle="Quality Assessment & Pre-Harvest Market Preparation"
                     className="w-full h-full object-cover"
@@ -454,33 +457,33 @@ export default function App() {
         </section>
 
         {/* 8. HOW IT WORKS — 5 SIMPLE STEPS */}
-        <section id="how-it-works" className="bg-[#F4F8F6] border-y border-[#E2E8F0] py-14 sm:py-24">
+        <section id="how-it-works" className="bg-[#F4F8F6] border-y border-[#E2E8F0] py-12 sm:py-16 lg:py-20">
           <div className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <h2 className="text-[24px] sm:text-4xl font-bold text-[#102A43] leading-[1.25] tracking-tight">
+              <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-bold text-[#102A43] leading-[1.25] tracking-tight">
                 HOW IT WORKS — 5 SIMPLE STEPS
               </h2>
             </div>
 
-            <div className="mt-8 sm:mt-10 space-y-5">
+            <div className="mt-7 sm:mt-9 space-y-4">
               {STEPS.map((step) => (
                 <div
                   key={step.stepNumber}
-                  className="bg-white border border-[#E2E8F0] rounded-xl p-6 sm:p-8 flex flex-col sm:flex-row gap-3.5 sm:gap-8"
+                  className="bg-white border border-[#E2E8F0] rounded-xl p-5 sm:p-7 flex flex-col sm:flex-row gap-2.5 sm:gap-7"
                 >
-                  <div className="sm:w-28 shrink-0">
+                  <div className="sm:w-24 shrink-0">
                     <span
-                      className="inline-block text-sm font-bold text-[#0D9488] tabular-nums"
+                      className="inline-block text-xs sm:text-sm font-bold text-[#0D9488] tabular-nums"
                       style={{ fontFamily: 'var(--font-mono)' }}
                     >
                       {step.stepNumber}
                     </span>
                   </div>
                   <div>
-                    <h3 className="text-[19px] sm:text-xl font-bold text-[#102A43] leading-[1.3]">
+                    <h3 className="text-[18px] sm:text-[18px] font-bold text-[#102A43] leading-[1.35]">
                       {step.heading}
                     </h3>
-                    <p className="mt-2.5 text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+                    <p className="mt-2 text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                       {step.body}
                     </p>
                   </div>
@@ -488,11 +491,11 @@ export default function App() {
               ))}
             </div>
 
-            <div className="mt-8 bg-white border border-[#E2E8F0] rounded-xl p-6 sm:p-8 space-y-4">
-              <p className="text-[17px] sm:text-lg font-medium text-[#102A43] leading-[1.6]">
+            <div className="mt-7 bg-white border border-[#E2E8F0] rounded-xl p-5 sm:p-7 space-y-3.5">
+              <p className="text-[17px] sm:text-[16px] font-medium text-[#102A43] leading-[1.6]">
                 Then we stay with you: market updates, buyer demand, farming guidance — and we start preparing your next season before you plant it.
               </p>
-              <p className="pt-4 border-t border-[#E2E8F0] text-[17px] sm:text-base text-[#475569] leading-[1.6]">
+              <p className="pt-3.5 border-t border-[#E2E8F0] text-[17px] sm:text-[15px] text-[#475569] leading-[1.6]">
                 <span className="font-bold text-[#102A43]">One honest note:</span> registration does not guarantee an instant buyer match. Buyer connections depend on real demand, your produce, and market conditions. What registration guarantees is this — your market preparation starts today instead of on harvest morning.
               </p>
             </div>
@@ -500,26 +503,26 @@ export default function App() {
         </section>
 
         {/* 9. WHAT'S INCLUDED — THE FULL ADVANTAGE */}
-        <section id="whats-included" className="bg-white py-14 sm:py-24">
+        <section id="whats-included" className="bg-white py-12 sm:py-16 lg:py-20">
           <div className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <h2 className="text-[24px] sm:text-4xl font-bold text-[#102A43] leading-[1.25] tracking-tight">
+              <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-bold text-[#102A43] leading-[1.25] tracking-tight">
                 WHAT&apos;S INCLUDED — THE FULL ADVANTAGE
               </h2>
             </div>
 
             {/* Desktop & Tablet Clean Table */}
-            <div className="mt-10 hidden md:block overflow-hidden rounded-xl border border-[#E2E8F0]">
+            <div className="mt-8 hidden md:block overflow-hidden rounded-xl border border-[#E2E8F0]">
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="bg-[#F4F8F6] border-b border-[#E2E8F0]">
-                    <th className="py-4 px-6 text-xs font-bold tracking-wider text-[#102A43]">
+                    <th className="py-3.5 px-6 text-xs font-bold tracking-wider text-[#102A43]">
                       INCLUDED
                     </th>
-                    <th className="py-4 px-6 text-xs font-bold tracking-wider text-[#102A43]">
+                    <th className="py-3.5 px-6 text-xs font-bold tracking-wider text-[#102A43]">
                       WHAT IT DOES FOR YOU
                     </th>
-                    <th className="py-4 px-6 text-xs font-bold tracking-wider text-[#102A43] text-right">
+                    <th className="py-3.5 px-6 text-xs font-bold tracking-wider text-[#102A43] text-right">
                       VALUE
                     </th>
                   </tr>
@@ -527,14 +530,14 @@ export default function App() {
                 <tbody className="divide-y divide-[#E2E8F0] bg-white">
                   {INCLUDED_ROWS.map((row) => (
                     <tr key={row.included} className="hover:bg-[#F4F8F6]/60 transition-colors">
-                      <td className="py-4 px-6 text-base font-bold text-[#102A43] align-top w-1/3">
+                      <td className="py-3.5 px-6 text-[15px] font-bold text-[#102A43] align-top w-1/3">
                         {row.included}
                       </td>
-                      <td className="py-4 px-6 text-base text-[#475569] leading-[1.6] align-top">
+                      <td className="py-3.5 px-6 text-[15px] text-[#475569] leading-[1.6] align-top">
                         {row.benefit}
                       </td>
                       <td
-                        className="py-4 px-6 text-base font-semibold text-[#102A43] text-right align-top whitespace-nowrap tabular-nums"
+                        className="py-3.5 px-6 text-[15px] font-semibold text-[#102A43] text-right align-top whitespace-nowrap tabular-nums"
                         style={{ fontFamily: 'var(--font-mono)' }}
                       >
                         {row.value}
@@ -546,12 +549,12 @@ export default function App() {
                   <tr className="bg-[#F4F8F6] border-t border-[#E2E8F0]">
                     <td
                       colSpan={2}
-                      className="py-5 px-6 text-base sm:text-lg font-bold text-[#102A43]"
+                      className="py-4 px-6 text-[16px] font-bold text-[#102A43]"
                     >
                       TOTAL SERVICE VALUE
                     </td>
                     <td
-                      className="py-5 px-6 text-lg sm:text-xl font-extrabold text-[#0D9488] text-right whitespace-nowrap tabular-nums"
+                      className="py-4 px-6 text-[18px] font-extrabold text-[#0D9488] text-right whitespace-nowrap tabular-nums"
                       style={{ fontFamily: 'var(--font-mono)' }}
                     >
                       ₦54,500
@@ -562,10 +565,10 @@ export default function App() {
             </div>
 
             {/* Mobile Stacked Value List */}
-            <div className="mt-8 md:hidden rounded-xl border border-[#E2E8F0] divide-y divide-[#E2E8F0] overflow-hidden">
+            <div className="mt-7 md:hidden rounded-xl border border-[#E2E8F0] divide-y divide-[#E2E8F0] overflow-hidden">
               {INCLUDED_ROWS.map((row) => (
-                <div key={row.included} className="p-5 sm:p-6 bg-white">
-                  <div className="flex items-start justify-between gap-4">
+                <div key={row.included} className="p-4 sm:p-5 bg-white">
+                  <div className="flex items-start justify-between gap-3">
                     <h3 className="text-[18px] font-bold text-[#102A43] leading-[1.35]">
                       {row.included}
                     </h3>
@@ -576,13 +579,13 @@ export default function App() {
                       {row.value}
                     </span>
                   </div>
-                  <p className="mt-2.5 text-[17px] text-[#475569] leading-[1.6]">{row.benefit}</p>
+                  <p className="mt-2 text-[17px] text-[#475569] leading-[1.6]">{row.benefit}</p>
                 </div>
               ))}
-              <div className="p-5 sm:p-6 bg-[#F4F8F6] flex items-center justify-between gap-4">
+              <div className="p-4 sm:p-5 bg-[#F4F8F6] flex items-center justify-between gap-4">
                 <span className="text-[17px] font-bold text-[#102A43]">TOTAL SERVICE VALUE</span>
                 <span
-                  className="text-[19px] font-extrabold text-[#0D9488] whitespace-nowrap tabular-nums"
+                  className="text-[18px] font-extrabold text-[#0D9488] whitespace-nowrap tabular-nums"
                   style={{ fontFamily: 'var(--font-mono)' }}
                 >
                   ₦54,500
@@ -590,12 +593,12 @@ export default function App() {
               </div>
             </div>
 
-            <div className="mt-8 rounded-xl bg-[#F4F8F6] border border-[#E2E8F0] p-6 sm:p-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-              <div className="space-y-2.5 max-w-2xl">
-                <p className="text-[20px] sm:text-2xl font-bold text-[#102A43] leading-[1.35]">
+            <div className="mt-7 rounded-xl bg-[#F4F8F6] border border-[#E2E8F0] p-5 sm:p-7 flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+              <div className="space-y-2 max-w-2xl">
+                <p className="text-[19px] sm:text-[20px] font-bold text-[#102A43] leading-[1.35]">
                   Today, registration and initial market-access support are FREE.
                 </p>
-                <p className="text-[17px] sm:text-base text-[#475569] leading-[1.6]">
+                <p className="text-[17px] sm:text-[15px] text-[#475569] leading-[1.6]">
                   We are building our first farmer network — and early farmers are joining at no registration cost. Any future service charges or third-party expenses (like actual transport hire) will be communicated and agreed with you before anything happens. No surprise deductions. Ever.
                 </p>
               </div>
@@ -603,7 +606,7 @@ export default function App() {
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(true)}
-                  className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-[#0F766E] text-white text-base font-semibold hover:bg-[#0D9488] transition-colors cursor-pointer whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F766E]"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3 rounded-lg bg-[#0F766E] text-white text-[15px] font-semibold hover:bg-[#0D9488] transition-colors cursor-pointer whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F766E]"
                 >
                   Register Free Today
                 </button>
@@ -613,13 +616,13 @@ export default function App() {
         </section>
 
         {/* 12. URGENCY */}
-        <section className="bg-[#F4F8F6] border-y border-[#E2E8F0] py-14 sm:py-24">
+        <section className="bg-[#F4F8F6] border-y border-[#E2E8F0] py-12 sm:py-16 lg:py-20">
           <div className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
-            <h2 className="text-[24px] sm:text-4xl font-bold text-[#102A43] leading-[1.25] tracking-tight">
+            <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-bold text-[#102A43] leading-[1.25] tracking-tight">
               THE HARVEST CLOCK IS ALREADY TICKING
             </h2>
 
-            <div className="mt-6 space-y-4 text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+            <div className="mt-5 space-y-3.5 text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
               <p className="font-semibold text-[#102A43]">
                 The biggest mistake farmers make is not selling badly.
               </p>
@@ -629,32 +632,32 @@ export default function App() {
               <p>
                 By harvest morning, the clock is against you: the produce is perishable, the fees are due, and the buyers who show up first know it. That&apos;s when prices are dictated — not negotiated.
               </p>
-              <p className="pt-2 font-bold text-[#102A43]">
+              <p className="pt-1.5 font-bold text-[#102A43]">
                 Here&apos;s what changes when you register before harvest:
               </p>
             </div>
 
-            <div className="mt-6 bg-white border border-[#E2E8F0] rounded-xl divide-y divide-[#E2E8F0]">
+            <div className="mt-5 bg-white border border-[#E2E8F0] rounded-xl divide-y divide-[#E2E8F0]">
               {URGENCY_POINTS.map((point) => (
-                <div key={point.lead} className="p-5 sm:p-6 flex items-start gap-4">
+                <div key={point.lead} className="p-4 sm:p-5 flex items-start gap-3.5">
                   <span
-                    className="mt-1.5 w-5 h-5 rounded-full bg-[#0D9488]/12 text-[#0D9488] flex items-center justify-center shrink-0"
+                    className="mt-1.5 sm:mt-1 w-5 h-5 rounded-full bg-[#0D9488]/12 text-[#0D9488] flex items-center justify-center shrink-0"
                     aria-hidden="true"
                   >
                     <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                   </span>
-                  <p className="text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+                  <p className="text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                     <span className="font-bold text-[#102A43]">{point.lead}</span> — {point.detail}
                   </p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 space-y-2.5">
-              <p className="text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+            <div className="mt-7 space-y-2">
+              <p className="text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                 Every season you wait is another harvest sold on panic instead of preparation.
               </p>
-              <p className="text-[19px] sm:text-xl font-bold text-[#102A43] leading-[1.35]">
+              <p className="text-[18px] sm:text-[19px] font-bold text-[#102A43] leading-[1.35]">
                 Your harvest has a date. Your market preparation should start before it.
               </p>
             </div>
@@ -662,53 +665,53 @@ export default function App() {
         </section>
 
         {/* 13. THE GUARANTEE */}
-        <section className="bg-white py-14 sm:py-24">
+        <section className="bg-white py-12 sm:py-16 lg:py-20">
           <div className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <h2 className="text-[24px] sm:text-4xl font-bold text-[#102A43] leading-[1.25] tracking-tight">
+              <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-bold text-[#102A43] leading-[1.25] tracking-tight">
                 OUR TRANSPARENCY &amp; FARMER PROTECTION PROMISE
               </h2>
-              <p className="mt-5 text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+              <p className="mt-4 text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                 We know why you&apos;re skeptical. You&apos;ve been promised before — by cooperatives, agents, schemes, and projects that arrived loudly and disappeared quietly.
               </p>
-              <p className="mt-3.5 text-[19px] sm:text-xl font-bold text-[#102A43] leading-[1.35]">
+              <p className="mt-3 text-[18px] sm:text-[18px] font-bold text-[#102A43] leading-[1.4]">
                 So we won&apos;t ask for your trust. We&apos;ll give you control instead.
               </p>
-              <p className="mt-4 text-[17px] sm:text-lg font-medium text-[#475569] leading-[1.6]">
+              <p className="mt-3.5 text-[17px] sm:text-[16px] font-medium text-[#475569] leading-[1.6]">
                 Here is exactly what we stand behind:
               </p>
             </div>
 
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+            <div className="mt-7 grid grid-cols-1 md:grid-cols-2 gap-4">
               {GUARANTEE_POINTS.map((item) => (
                 <div
                   key={item.lead}
-                  className="bg-[#F4F8F6] border border-[#E2E8F0] rounded-xl p-5 sm:p-6 flex items-start gap-3.5"
+                  className="bg-[#F4F8F6] border border-[#E2E8F0] rounded-xl p-4 sm:p-5 flex items-start gap-3"
                 >
                   <span
-                    className="mt-1 w-6 h-6 rounded-md bg-[#0D9488] text-white flex items-center justify-center shrink-0"
+                    className="mt-1 sm:mt-0.5 w-5 h-5 rounded-md bg-[#0D9488] text-white flex items-center justify-center shrink-0"
                     aria-hidden="true"
                   >
-                    <Check className="w-4 h-4 stroke-[2.5]" />
+                    <Check className="w-3.5 h-3.5 stroke-[2.5]" />
                   </span>
-                  <p className="text-[17px] sm:text-base text-[#475569] leading-[1.6]">
+                  <p className="text-[17px] sm:text-[15px] text-[#475569] leading-[1.6]">
                     <span className="font-bold text-[#102A43]">{item.lead}</span> — {item.detail}
                   </p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-9 sm:mt-10 rounded-xl border border-[#E2E8F0] bg-white p-6 sm:p-8 space-y-4">
-              <h3 className="text-[20px] sm:text-2xl font-bold text-[#102A43] leading-[1.3]">
+            <div className="mt-8 rounded-xl border border-[#E2E8F0] bg-white p-5 sm:p-7 space-y-3.5">
+              <h3 className="text-[19px] sm:text-[20px] font-bold text-[#102A43] leading-[1.3]">
                 And here is what we will never do — promise what we can&apos;t control.
               </h3>
-              <p className="text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+              <p className="text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                 We do not guarantee an instant buyer, a specific price, or that every harvest will sell. Anybody who promises you that is lying to you — ask the last scheme how theirs went.
               </p>
-              <p className="text-[17px] sm:text-lg text-[#102A43] font-semibold leading-[1.6]">
+              <p className="text-[17px] sm:text-[16px] text-[#102A43] font-semibold leading-[1.6]">
                 What we guarantee is the process: no money taken in secret, no produce moved without your understanding and written agreement, and no terms you haven&apos;t seen.
               </p>
-              <p className="text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+              <p className="text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                 Trust is not something we expect you to give us blindly. It is something we intend to earn — through our actions, transparency, and accountability.
               </p>
             </div>
@@ -716,22 +719,22 @@ export default function App() {
         </section>
 
         {/* 14. FAQ */}
-        <section id="faq" className="bg-[#F4F8F6] border-y border-[#E2E8F0] py-14 sm:py-24">
+        <section id="faq" className="bg-[#F4F8F6] border-y border-[#E2E8F0] py-12 sm:py-16 lg:py-20">
           <div className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-              <h2 className="text-[24px] sm:text-4xl font-bold text-[#102A43] leading-[1.25] tracking-tight">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+              <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-bold text-[#102A43] leading-[1.25] tracking-tight">
                 YOUR QUESTIONS, ANSWERED STRAIGHT
               </h2>
               <button
                 type="button"
                 onClick={toggleAllFaqs}
-                className="self-start sm:self-auto text-[15px] sm:text-sm font-semibold text-[#0F766E] hover:text-[#0D9488] underline underline-offset-4 cursor-pointer whitespace-nowrap shrink-0"
+                className="self-start sm:self-auto text-sm font-semibold text-[#0F766E] hover:text-[#0D9488] underline underline-offset-4 cursor-pointer whitespace-nowrap shrink-0"
               >
                 {allFaqsExpanded ? 'Collapse all' : 'Expand all'}
               </button>
             </div>
 
-            <div className="mt-8 space-y-3.5">
+            <div className="mt-7 space-y-3">
               {FAQ_ITEMS.map((item, idx) => {
                 const isOpen = openFaqs.has(idx);
                 return (
@@ -743,9 +746,9 @@ export default function App() {
                       type="button"
                       onClick={() => toggleFaq(idx)}
                       aria-expanded={isOpen}
-                      className="w-full px-5 sm:px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-[#F4F8F6]/50 transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-inset focus-visible:outline-[#0D9488]"
+                      className="w-full px-5 py-4 text-left flex items-center justify-between gap-4 hover:bg-[#F4F8F6]/50 transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-inset focus-visible:outline-[#0D9488]"
                     >
-                      <span className="text-[18px] sm:text-lg font-bold text-[#102A43] leading-[1.4]">
+                      <span className="text-[17px] sm:text-[17px] font-bold text-[#102A43] leading-[1.4]">
                         {item.question}
                       </span>
                       <ChevronDown
@@ -756,7 +759,7 @@ export default function App() {
                       />
                     </button>
                     {isOpen && (
-                      <div className="px-5 sm:px-6 pb-5 pt-3 text-[17px] sm:text-base text-[#475569] leading-[1.6] border-t border-[#E2E8F0]/70">
+                      <div className="px-5 pb-4 pt-2.5 text-[17px] sm:text-[15px] text-[#475569] leading-[1.6] border-t border-[#E2E8F0]/70">
                         {item.answer}
                       </div>
                     )}
@@ -768,14 +771,14 @@ export default function App() {
         </section>
 
         {/* 15. FINAL CTA */}
-        <section className="bg-white py-14 sm:py-24">
+        <section className="bg-white py-12 sm:py-16 lg:py-20">
           <div className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
-            <div className="rounded-2xl bg-[#F4F8F6] border border-[#E2E8F0] p-6 sm:p-12">
-              <h2 className="text-[24px] sm:text-4xl font-extrabold text-[#102A43] leading-[1.22] tracking-tight">
+            <div className="rounded-2xl bg-[#F4F8F6] border border-[#E2E8F0] p-6 sm:p-10">
+              <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-extrabold text-[#102A43] leading-[1.22] tracking-tight">
                 Your Harvest Deserves More Than Whoever Shows Up First.
               </h2>
 
-              <div className="mt-6 space-y-4 text-[17px] sm:text-lg text-[#475569] leading-[1.6]">
+              <div className="mt-5 space-y-3.5 text-[17px] sm:text-[16px] text-[#475569] leading-[1.6]">
                 <p>
                   You&apos;ve spent months growing it. The early mornings. The weather. The pests. The input costs. The waiting.
                 </p>
@@ -787,26 +790,26 @@ export default function App() {
                 </p>
               </div>
 
-              <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+              <div className="mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <a
                   href={WHATSAPP_DEFAULT_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2.5 px-5 sm:px-6 py-4 rounded-lg bg-[#0F766E] text-white text-[15px] sm:text-base font-bold text-center hover:bg-[#0D9488] transition-colors sm:whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F766E]"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg bg-[#0F766E] text-white text-[15px] font-bold text-center hover:bg-[#0D9488] transition-colors sm:whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F766E]"
                 >
-                  <MessageSquare className="w-5 h-5 shrink-0" aria-hidden="true" />
+                  <MessageSquare className="w-4 h-4 shrink-0" aria-hidden="true" />
                   <span>REGISTER FREE ON WHATSAPP — CLICK HERE</span>
                 </a>
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(true)}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg border border-[#E2E8F0] bg-white text-[#102A43] text-[15px] sm:text-base font-semibold hover:border-[#0D9488] transition-colors cursor-pointer sm:whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D9488]"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg border border-[#E2E8F0] bg-white text-[#102A43] text-[15px] font-semibold hover:border-[#0D9488] transition-colors cursor-pointer sm:whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D9488]"
                 >
                   Or Register With Form
                 </button>
               </div>
 
-              <div className="mt-7 pt-6 border-t border-[#E2E8F0] space-y-3 text-[17px] sm:text-base text-[#102A43] leading-[1.6]">
+              <div className="mt-6 pt-5 border-t border-[#E2E8F0] space-y-2.5 text-[17px] sm:text-[15px] text-[#102A43] leading-[1.6]">
                 <p className="flex items-center gap-2.5 font-semibold">
                   <Phone className="w-4 h-4 text-[#0D9488] shrink-0" aria-hidden="true" />
                   <span>
@@ -825,11 +828,11 @@ export default function App() {
                 </p>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-[#E2E8F0] space-y-2.5">
-                <p className="text-[19px] sm:text-lg font-bold text-[#102A43] leading-[1.35]">
+              <div className="mt-6 pt-5 border-t border-[#E2E8F0] space-y-2">
+                <p className="text-[18px] font-bold text-[#102A43] leading-[1.35]">
                   From Farm to Market, Creating Better Opportunities for Every Farmer.
                 </p>
-                <p className="text-[17px] sm:text-base text-[#475569] leading-[1.6]">
+                <p className="text-[17px] sm:text-[15px] text-[#475569] leading-[1.6]">
                   Don&apos;t wait until your harvest is ready before thinking about where to sell it. Start today — while registration is free, and while there&apos;s still time to prepare.
                 </p>
               </div>
@@ -839,20 +842,20 @@ export default function App() {
       </main>
 
       {/* Quiet Footer */}
-      <footer className="bg-white border-t border-[#E2E8F0] py-10">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+      <footer className="bg-white border-t border-[#E2E8F0] py-8 sm:py-10">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
           <div>
             <p
-              className="text-[17px] sm:text-base font-bold text-[#102A43]"
+              className="text-[15px] sm:text-base font-bold text-[#102A43]"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               AgroVision Farm-to-Market Advantage™
             </p>
-            <p className="mt-1.5 text-[15px] sm:text-sm text-[#475569] leading-[1.6]">
+            <p className="mt-1 text-sm text-[#475569] leading-[1.6]">
               Market-access and produce-aggregation service for farmers in Nigeria.
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[15px] sm:text-sm text-[#475569]">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-[#475569]">
             <a href="#the-problem" className="hover:text-[#102A43] transition-colors">
               The Problem
             </a>
